@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+    background-image: url(eplimages/pitch.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#startButton, #mainMenu, #resetButton {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: red;
+}
+
+#resetButton {
+    margin-top: 250px; 
+    background-color: red;
+}
+
+#resetButton:hover {
+    background-color: greenyellow;
+}
+
+#mainMenu {
+    margin-top: 250px; 
+    background-color: rgb(72, 23, 250);
+}
+#mainMenu:hover {
+
+    background-color: rgb(14, 223, 238);
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 1.5s;
+    overflow: hidden;
+}
+
+.card.flipped {
+    transform: rotateY(900deg);
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card.flipped img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+#timer {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: red; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 8px rgb(7, 118, 245); 
+}
+
+#l2highScores {
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+}
+
+#l2highScores h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#l2scoreList {
+    text-align: center;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0;
+}
+
+#l2scoreList li {
+    padding: 5px 10px;
+    border-bottom: 1px solid gold;
+}
+
+#l2scoreList li:last-child {
+    border-bottom: none;
+}

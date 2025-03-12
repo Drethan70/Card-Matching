@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Crest Matching Game</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: red;
+            font-size: 60px;
+            text-shadow: 3px 3px rgb(7, 118, 245);
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            gap: 10px;
+            padding: 0 10px;
+        }
+
+        button {
+            height: calc(100vh / 4);
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Original Images/BBC Match of the Day 2024-25 Intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Game Title -->
+    <h1>Football Crest Matching Game</h1>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <div class="game-section">
+            <button id="epl"></button>
+            <div id="eplHighScores" class="score"></div>
+        </div>
+        <div class="game-section">
+            <button id="champ"></button>
+            <div id="champhighScores" class="score"></div>
+        </div>
+        <div class="game-section">
+            <button id="l1"></button>
+            <div id="l1highScores" class="score"></div>
+        </div>
+        <div class="game-section">
+            <button id="l2"></button>
+            <div id="l2highScores" class="score"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="index.js"></script>
+</body>
+</html>

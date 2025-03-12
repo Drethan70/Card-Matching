@@ -1,0 +1,175 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(eplimages/pitch.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page container */
+.container {
+    display: flex; /* Side-by-side layout for button and game sections */
+    justify-content: space-between; /* Ensure proper spacing between sections */
+    align-items: stretch; /* Match heights of both sections */
+    height: 100%; /* Take the full height of the parent container */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Add space between buttons and game container */
+}
+
+.button-container {
+    display: flex; /* Use Flexbox for vertical alignment */
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: space-between; /* Evenly space buttons: top, middle, bottom */
+    align-items: center; /* Center buttons horizontally */
+    height: 100%; /* Ensure the container matches the full height of the game container */
+    width: 200px; /* Consistent button section width */
+    gap: 190px;
+}
+
+/* General button styling */
+button {
+    width: 100%; /* Full width of the button container */
+    max-width: 180px; /* Limit maximum button width for consistency */
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: red;
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Button-specific alignment (Flexbox handles placement automatically) */
+#epl-start-button {
+    align-self: stretch; /* Ensure consistent horizontal alignment */
+}
+
+#epl-main-menu-button {
+    align-self: stretch; /* Ensure consistent horizontal alignment */
+}
+
+#epl-reset-button {
+    align-self: stretch; /* Ensure consistent horizontal alignment */
+    background-color: red;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(6, 100px); /* Adjust grid size */
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+#epl-high-scores {
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    margin-top: 20px; /* Add space between cards and high score table */
+}
+
+/* Specific button overrides */
+#epl-main-menu-button {
+    /* margin-top: 250px; */
+    background-color: rgb(72, 23, 250);
+}
+
+#epl-main-menu-button:hover {
+    background-color: rgb(14, 223, 238);
+}
+#epl-reset-button:hover {
+    background-color: greenyellow;
+}
+
+/* Game container for cards */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 1s ease;
+    overflow: hidden;
+}
+
+.card.flipped {
+    transform: rotateY(900deg);
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Timer styling */
+#epl-timer {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(221, 28, 28);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 8px rgb(7, 118, 245);
+}
+
+/* High scores styling */
+#epl-high-scores {
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+}
+
+#epl-high-scores h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#epl-score-list {
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+#epl-score-list li {
+    padding: 5px 10px;
+    border-bottom: 1px solid black;
+}
+
+#epl-score-list li:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,106 @@
+/* General body and layout */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(eplimages/pitch.png);
+    background-size: cover;
+    z-index: -2;
+}
+
+/* Video background styling */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Ensure video is behind content */
+    pointer-events: none; /* Prevent interactions */
+    aspect-ratio: 16/9;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Ensure video does not capture clicks */
+}
+
+/* Main content styling */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above video */
+    color: white; /* Contrast against video background */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Button container grid */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for buttons */
+    grid-template-rows: repeat(2, 1fr); /* Two rows for buttons */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    gap: 50px; /* Spacing between buttons */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* General button styling */
+button {
+    width: 100%;
+    height: 100%;
+    background-size: contain; /* Scale image to fit button */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center background image */
+    border: none;
+    border-radius: 50px; /* Smooth, rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Specific button images */
+#epl {
+    background-image: url(eplimages/logo.png); /* Premier League button */
+}
+
+#champ {
+    background-image: url(ChampImages/logo.png); /* Championship button */
+}
+
+#l1 {
+    background-image: url(L1Images/logo.png); /* League 1 button */
+}
+
+#l2 {
+    background-image: url(L2Images/logo.png); /* League 2 button */
+}
+
+/* Score display styling */
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align buttons and scores centrally */
+}
+
+.score {
+    margin-top: 5px; /* Space between button and score */
+    font-size: 20px; /* Visible and clean font */
+    font-weight: bold;
+    color: rgb(255, 0, 0); /* Red text */
+    text-shadow: 1.5px 1.5px rgb(7, 118, 245); /* Subtle shadow for clarity */
+}
