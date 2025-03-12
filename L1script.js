@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetButton = document.getElementById("resetButton");
     const startButton = document.getElementById("startButton");
     const scoreList = document.getElementById("l1scoreList");
-    document.getElementById('mainMenu').addEventListener('click', function() {
-        window.location.href = 'index.html';
-    });
+    // document.getElementById('mainMenu').addEventListener('click', function() {
+    //     window.location.href = 'index.html';
+    // });
      
     let firstCard = null, secondCard = null;
     let lockBoard = false;
