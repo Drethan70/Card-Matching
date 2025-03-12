@@ -15,7 +15,6 @@ document.getElementById('l2').addEventListener('click', () => {
     window.location.href = 'L2.html';
 });
 
-// Function to update high score during the game
 // Function to update a specific game's high score dynamically
 function updateScore(game, newScore) {
     // Ensure highScores is loaded from localStorage
@@ -49,21 +48,6 @@ function displayMainPageScores() {
     });
 }
 
-
-// Function to display scores from memory for dynamic updates
-// function displayScores() {
-//     const versions = ["epl", "champ", "l1", "l2"]; // Game versions
-//     versions.forEach(version => {
-//         const key = `${version}highScore`;
-//         const score = localStorage.getItem(key) || "0";
-//         document.getElementById(`${version}highScore`).textContent = `Highest Score: ${score}`;
-//     });
-// }
-
-// // Initialize and display scores when the main page loads
-// document.addEventListener("DOMContentLoaded", displayMainPageScores);
-
-// // Example high scores (these would typically be dynamically updated in your game logic)
 // // Initialize high scores from localStorage or set default values
 let highScores = {
     epl: 153,
@@ -81,23 +65,6 @@ if (!localStorage.getItem("highScores")) {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 }
 
-// function updateHighScores() {
-//     // Load high scores from localStorage
-//     console.log(localStorage.getItem("eplHighScores"))
-//     highScores = JSON.parse(localStorage.getItem("eplHighScores")) || {
-//         epl: 0,
-//         champ: 0,
-//         l1: 0,
-//         l2: 0
-//     };
-//         console.log(highScores)
-//     // Update the DOM elements with the correct scores
-//     document.getElementById("eplHighScores").textContent = `High Score: ${highScores.epl}`;
-//     document.getElementById("champhighScores").textContent = `High Score: ${highScores.champ}`;
-//     document.getElementById("l1highScores").textContent = `High Score: ${highScores.l1}`;
-//     document.getElementById("l2highScores").textContent = `High Score: ${highScores.l2}`;
-// }
-
 function updateHighScores() {
     // Load high scores from localStorage
     eplScore = JSON.parse(localStorage.getItem("eplHighScores"))
@@ -106,15 +73,6 @@ function updateHighScores() {
     l2Score = JSON.parse(localStorage.getItem("l2highScores"))
 
 
-    //  highScores = JSON.parse(localStorage.getItem("highScores")) || {
-    //     epl: 0,
-    //     champ: 0,
-    //     l1: 0,
-    //     l2: 0
-    // };
-
-
-  
     // Update the DOM elements with the correct scores
     document.getElementById("eplHighScores").textContent = `High Score: ${eplScore[0]}`;
     document.getElementById("champhighScores").textContent = `High Score: ${champScore[0]}`;
