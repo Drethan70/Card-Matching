@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cardValues = Array.from({ length: 24 }, (_, i) => i + 1); 
     let deck = [...cardValues, ...cardValues].sort(() => Math.random() - 0.5);
+    
     const gameContainer = document.getElementById("gameContainer");
     const resetButton = document.getElementById("resetButton");
     const startButton = document.getElementById("startButton");
