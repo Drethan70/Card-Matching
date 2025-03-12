@@ -59,16 +59,24 @@ document.addEventListener("DOMContentLoaded", () => {
             lockBoard = false;
         } else {
             setTimeout(() => {
-                firstCard.img.src = "L1images/logo.png";
-                secondCard.img.src = "L1images/logo.png";
-                firstCard.card.classList.remove("flipped");
-                secondCard.card.classList.remove("flipped");
-                firstCard = secondCard = null;
-                lockBoard = false;
+                // firstCard.img.src = "L1images/logo.png";
+                // secondCard.img.src = "L1images/logo.png";
+                // firstCard.card.classList.remove("flipped");
+                // secondCard.card.classList.remove("flipped");
+                // firstCard = secondCard = null;
+                // lockBoard = false;
+                resetCards(firstCard, secondCard);
+                resetSelections();
             }, 500);
         }
     }
-
+    
+    function resetCards(...cards) {
+        cards.forEach(({ card, img }) => {
+            img.src = "eplimages/logo.png";
+            card.classList.remove("flipped");
+        });
+    }
     function resetGame() {
         gameStarted = false;
         gameContainer.innerHTML = "";
