@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
             lockBoard = false;
         } else {
             setTimeout(() => {
-                firstCard.img.src = "l1images/logo.png";
-                secondCard.img.src = "l1images/logo.png";
+                firstCard.img.src = "L1images/logo.png";
+                secondCard.img.src = "L1images/logo.png";
                 firstCard.card.classList.remove("flipped");
                 secondCard.card.classList.remove("flipped");
                 firstCard = secondCard = null;
