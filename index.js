@@ -1,6 +1,6 @@
 // Navigation for each button
 document.getElementById('epl').addEventListener('click', () => {
-    window.location.href = 'epl.html';
+    window.location.href = 'EPL.html';
 });
 
 document.getElementById('champ').addEventListener('click', () => {
