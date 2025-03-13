@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 500);
         }
     }
-
+    
+    function resetCards(...cards) {
+        cards.forEach(({ card, img }) => {
+            img.src = "L1images/logo.png";
+            card.classList.remove("flipped");
+        });
+    }
     function resetGame() {
         gameStarted = false;
         gameContainer.innerHTML = "";
