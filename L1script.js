@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function flipCard(card, img) {
         if (lockBoard || card.classList.contains("flipped") || card === firstCard?.card) return;
 
-        img.src = `l1Images/${card.dataset.value}.png`;
+        img.src = `L1Images/${card.dataset.value}.png`;
         card.classList.add("flipped");
 
         if (!firstCard) {
