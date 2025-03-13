@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.dataset.value = value;
 
         const img = document.createElement("img");
-        img.src = "L1images/logo.png";
+        img.src = "L1Images/logo.png";
         img.classList.add("card-img");
         card.appendChild(img);
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function flipCard(card, img) {
         if (lockBoard || card.classList.contains("flipped") || card === firstCard?.card) return;
 
-        img.src = `l1images/${card.dataset.value}.png`;
+        img.src = `l1Images/${card.dataset.value}.png`;
         card.classList.add("flipped");
 
         if (!firstCard) {
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
             lockBoard = false;
         } else {
             setTimeout(() => {
-                firstCard.img.src = "l1images/logo.png";
-                secondCard.img.src = "l1images/logo.png";
+                firstCard.img.src = "L1Images/logo.png";
+                secondCard.img.src = "L1Images/logo.png";
                 firstCard.card.classList.remove("flipped");
                 secondCard.card.classList.remove("flipped");
                 firstCard = secondCard = null;
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function resetCards(...cards) {
         cards.forEach(({ card, img }) => {
-            img.src = "L1images/logo.png";
+            img.src = "L1Images/logo.png";
             card.classList.remove("flipped");
         });
     }
