@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cardValues = Array.from({ length: 24 }, (_, i) => i + 1); 
     let deck = [...cardValues, ...cardValues].sort(() => Math.random() - 0.5);
-    
     const gameContainer = document.getElementById("gameContainer");
     const resetButton = document.getElementById("resetButton");
     const startButton = document.getElementById("startButton");
     const scoreList = document.getElementById("l1scoreList");
-    // document.getElementById('mainMenu').addEventListener('click', function() {
-    //     window.location.href = 'index.html';
-    // });
+    document.getElementById('mainMenu').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
      
     let firstCard = null, secondCard = null;
     let lockBoard = false;
@@ -60,24 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
             lockBoard = false;
         } else {
             setTimeout(() => {
-                // firstCard.img.src = "L1images/logo.png";
-                // secondCard.img.src = "L1images/logo.png";
-                // firstCard.card.classList.remove("flipped");
-                // secondCard.card.classList.remove("flipped");
-                // firstCard = secondCard = null;
-                // lockBoard = false;
-                resetCards(firstCard, secondCard);
-                resetSelections();
+                firstCard.img.src = "l1images/logo.png";
+                secondCard.img.src = "l1images/logo.png";
+                firstCard.card.classList.remove("flipped");
+                secondCard.card.classList.remove("flipped");
+                firstCard = secondCard = null;
+                lockBoard = false;
             }, 500);
         }
     }
-    
-    function resetCards(...cards) {
-        cards.forEach(({ card, img }) => {
-            img.src = "eplimages/logo.png";
-            card.classList.remove("flipped");
-        });
-    }
+
     function resetGame() {
         gameStarted = false;
         gameContainer.innerHTML = "";
